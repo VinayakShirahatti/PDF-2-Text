@@ -1,0 +1,21 @@
+======================================================================
+RULE EXTRACTION RESULTS
+Source Markdown: extracted_content.md
+Total Pages: 2
+======================================================================
+
+DOCUMENT SUMMARY:
+The document provides guidelines for positioning holes and slots in relation to bends and edges in sheet metal design. It emphasizes the importance of maintaining specific distances to prevent deformation and bulging effects during the bending process.
+
+EXTRACTED RULES:
+[Page 1] Rule 1: Holes and slots positioned too close to bends are susceptible to deforming following bending. It is recommended to place holes away from bends at a distance of at least 2.5 times the material's thickness (T) plus the bend radius (R). For slots, position them at least 4 times the material's thickness plus the bend radius away from the bend. Minimum recommended hole edge from bend face = 2.5T + R. Minimum recommended slot edge from bend face = 4T + R.
+
+[Page 1] Rule 2: Holes and slots positioned too close to the edge can result in a "bulging" effect. A minimum space of at least 2 times the thickness of the sheet should be left between the extruded holes and the part edge.
+
+[Page 2] Rule 3: (Reiteration of Rule 1 from Page 1) Holes and slots positioned too close to bends are susceptible to deforming following bending. It is recommended to place holes away from bends at a distance of at least 2.5 times the material's thickness (T) plus the bend radius (R). For slots, position them at least 4 times the material's thickness plus the bend radius away from the bend. Minimum recommended hole edge from bend face = 2.5T + R. Minimum recommended slot edge from bend face = 4T + R.
+
+CROSS-PAGE OBSERVATIONS:
+The rule regarding holes and slots positioned too close to bends is repeated on both pages, emphasizing its importance. The guidelines for positioning relative to bends are consistent across both pages.
+
+NOTES:
+The document focuses on ensuring the structural integrity of sheet metal parts by providing specific measurements for hole and slot placement relative to bends and edges. The repetition of the rule on both pages suggests a strong emphasis on avoiding deformation during the bending process.
