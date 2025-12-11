@@ -187,4 +187,4 @@ Designed for scalable, production-grade PDF rule extraction
 
 🏁 Conclusion
 
-This system converts complex PDFs into clean Markdown and automatically extracts structured rules using intelligent single-pass or sliding-window methods.
+This system converts complex PDFs into clean Markdown and automatically extracts structured rules using intelligent single-pass or sliding-window methods
