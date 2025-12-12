@@ -8,7 +8,6 @@ import os
 from dotenv import load_dotenv
 import re
 
-# Load environment variables
 load_dotenv()
 api_key = os.environ.get("OPENAI_API_KEY")
 if not api_key:
@@ -310,4 +309,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
