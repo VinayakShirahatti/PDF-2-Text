@@ -14,7 +14,6 @@ from pdf2image import convert_from_path, pdfinfo_from_path
 from PIL import Image
 from openai import OpenAI
 
-# Initialize
 load_dotenv()
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -80,16 +79,13 @@ def pdf_to_markdown(pdf_path, output="extracted_content.md", dpi=150, workers=5,
     
     start = time.time()
     
-    # Get page count
     info = pdfinfo_from_path(pdf_path, poppler_path=poppler_path) if poppler_path else pdfinfo_from_path(pdf_path)
     total = info["Pages"]
     print(f"\n✓ {total} pages | DPI={dpi} | Workers={workers}\n")
     
-    # Convert and extract
     images = pdf_to_images(pdf_path, dpi, poppler_path)
     pages = extract_parallel(images, workers)
     
-    # Build markdown
     md = [
         f"# {Path(pdf_path).name}\n",
         f"**Pages:** {total} | **Date:** {time.strftime('%Y-%m-%d %H:%M:%S')}\n\n---\n\n"
@@ -98,7 +94,6 @@ def pdf_to_markdown(pdf_path, output="extracted_content.md", dpi=150, workers=5,
     for i in range(1, total + 1):
         md.extend([f"## Page {i}\n\n", pages.get(i, "[Missing]"), "\n\n---\n\n"])
     
-    # Save
     with open(output, "w", encoding="utf-8") as f:
         f.write("".join(md))
     
@@ -111,7 +106,6 @@ def pdf_to_markdown(pdf_path, output="extracted_content.md", dpi=150, workers=5,
 
 
 if __name__ == "__main__":
-    # Configuration
     PDF = "Testtt.pdf"
     OUTPUT = "extracted_content.md"
     
@@ -127,4 +121,5 @@ if __name__ == "__main__":
         print(f"\n✓ Success! Ready for Module 2")
     except Exception as e:
         print(f"\n✗ Error: {e}")
+
         print("Check: API key, poppler, PDF path")
